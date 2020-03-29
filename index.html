@@ -16,22 +16,24 @@ height: 100vh;
 }
 
 div button {
+position: relative;
 margin: auto;
-width: 100px;
-height: 100px;
+width: 150px;
+height: 150px
 border-radius: 50%;
 background: red;
 Color: white
+font-size: 20px;
 }
 
-div input:clicked {
+div button:clicked {
 background: dark-red;
 }
 </style>
  </head> 
 <body> 
 <div>
-<button onclick=“clickHandler”>Go</button>
+<button onclick=“clickHandler()”>Go</button>
 </div>
 </body>
 </html>
