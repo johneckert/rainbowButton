@@ -3,8 +3,7 @@
  <head> 
 <meta http-equiv="content-type" content="text/html; charset=utf-8"> <title>Rainbow Button</title>
 <script>
-function clickHandler(event) {
-event.preventDefault();
+function clickHandler() {
 fetch(“https://maker.ifttt.com/trigger/rainbow_button_pressed/with/key/cZfit0ttchNgxJhghKrlme”);
 }
 </script>
@@ -13,7 +12,7 @@ div {
 
 }
 
-div button {
+div div {
 position: relative;
 margin: auto;
 width: 150px;
@@ -24,14 +23,14 @@ Color: white;
 font-size: 20px;
 }
 
-div button:clicked {
+div div:clicked {
 background: dark-red;
 }
 </style>
  </head> 
 <body> 
 <div>
-<button onclick=“clickHandler(event)”>Go</button>
+<div onclick=“clickHandler();”>Go</div>
 </div>
 </body>
 </html>
