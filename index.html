@@ -4,9 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Rainbow Button</title>
     <style>
+      body {
+        background: grey;
+      }
+
       .container {
-        width: 90%;
-        height: 90%;
+        height: 600px;
       }
 
       .button {
@@ -19,24 +22,34 @@
         background: red;
         z-index: 99;
         color: white;
-        font-size: 20px;
+        font-size: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-color: black;
+        border-width: 2px;
       }
 
-      div div:clicked {
-        background: dark-red;
+      .button span {
+        pointer-events: none;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div c;ass="button" onclick="clickHandler();"></div>
-      <!-- <a href="https://maker.ifttt.com/trigger/rainbow_button_pressed/with/key/cZfit0ttchNgxJhghKrlme">test</a> -->
+      <div class="button" onclick="clickHandler();">
+        <span>PUSH</span>
+      </div>
     </div>
 
     <script type="text/javascript">
       function clickHandler() {
         fetch(
-          "https://maker.ifttt.com/trigger/rainbow_button_pressed/with/key/cZfit0ttchNgxJhghKrlme"
+          "https://maker.ifttt.com/trigger/rainbow_button_pressed/with/key/cZfit0ttchNgxJhghKrlme",
+          {
+            method: "GET",
+            mode: "no-cors"
+          }
         );
       }
     </script>
